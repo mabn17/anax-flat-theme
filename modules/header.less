@@ -1,0 +1,80 @@
+// Dark color of header img
+@head-color-dark: #254a04;
+
+
+.site-header {
+    height: 80px;
+}
+
+.site-logo-text,
+.navbar2,
+.profile {
+    float: left;
+    width: 30%;
+}
+
+.site-logo-text {
+    font-size: 2em;
+
+    & a {
+        text-decoration: none;
+        color: @head-color-dark;
+    }
+}
+
+.flash-wrap {
+    & img {
+        width: 1000px;
+    }
+}
+
+.article {
+    & img {
+        max-width: 400px;
+    }
+}
+
+// Background for list items in main nav
+@navbarItemBgColor: #f2f4f1;
+
+// Changes the size of responsive nav button
+@maxButtonFontSize: 1.6em;
+
+
+@media screen and (max-width: 1000px) {
+    .flash-wrap {
+        & img {
+            width: 100%;
+        }
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .site-logo-text {
+        width: 40%;
+    }
+
+    .navbar2 {
+        width: 50%;
+    }
+
+    .profile {
+        width: 10%;
+    }
+
+    .logo-1 {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 560px) {
+    .site-logo-text {
+        width: 85%;
+    }
+
+    .navbar2 {
+        display: none;
+    }
+}
