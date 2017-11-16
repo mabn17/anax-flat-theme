@@ -1,0 +1,113 @@
+/*
+ * Gridbased layout
+ */
+// @maxWidth: 900px;
+@gridWidth: 900px;
+@magicNumber: 24px;
+
+@columnWidth:   60;
+@gutterWidth:   20;
+@columns:       12;
+
+// @gridImage: "../img/grid950x24x30x10-nomargin.png";
+@gridImage: "../img/grid940x12x60x20-nomargin.png";
+
+@import "typo/grid.less";
+
+
+.inner-wrap {
+    .grid(@gridWidth);
+
+    html.vgrid &,
+    body.route-grid & {
+        .showGrid(@gridWidth, @gridImage);
+    }
+}
+
+.row {
+    .row();
+}
+
+.main,
+.flash-wrap,
+.footer-column-wrapper,
+.byline,
+.site-header {
+    .column(@columns);
+}
+
+// Fixing footer border
+.footer {
+    padding-right: (@totalWidth * @gutterWidth / 2) - 1px;
+}
+
+.site-logo-text {
+    .column(@columns / 4);
+}
+
+.navbar2 {
+    // .column((@columns * 3 / 9));
+    .column((@columns / 4) * 3);
+}
+
+// .article {
+//     .clearfix();
+//     .column((@columns / 4) * 3);
+// }
+.has-sidebar {
+    .row();
+    .column((@columns / 4) * 3);
+}
+
+.sidebar {
+    .column(3);
+}
+
+.dont-move-me {
+    margin: 0px;
+}
+
+.outer-wrap-header,
+.footer-column-wrapper,
+.outer-wrap-main {
+    margin-bottom: @magicNumber;
+}
+
+.grid-side {
+    margin: 10px;
+    position: relative;
+    left: 22px;
+}
+
+.footer-column {
+    .column(@columns / 3);
+}
+
+.wrap-all {
+    padding-top: 16px;
+}
+
+.navbar2 ul,
+.rm-small {
+    position: relative;
+    right: 5px;
+}
+
+.footer-column-wrapper {
+    border: 1px solid lightgreen;
+    overflow: auto;
+}
+
+.site-footer {
+    text-align: center;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-type: none;
+    }
+
+    li {
+        display: inline;
+    }
+}

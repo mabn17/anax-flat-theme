@@ -47,18 +47,18 @@ script:
     # Check versions of validation tools
     #- node --version
     #- npm --version
-    
+
     #- htmlhint --version
     #- csslint --version
     #- jscs --version
     #- jshint --version
     #- jsonlint --version
     #- js-yaml --version
-    
+
     #- html-minifier --version
     #- cleancss --version
     #- uglifyjs --version
-    
+
     # Run tests
     - make npm-version
     - make test

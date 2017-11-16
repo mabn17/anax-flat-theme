@@ -24,7 +24,7 @@
 
 .flash-wrap {
     & img {
-        width: 1000px;
+        width: @gridWidth;
     }
 }
 
@@ -45,6 +45,11 @@
     .flash-wrap {
         & img {
             width: 100%;
+        }
+    }
+    .article {
+        & img {
+            max-width: 40%;
         }
     }
 }
