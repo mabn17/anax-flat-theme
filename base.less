@@ -3,10 +3,11 @@
 */
 @import url(modules.less);
 // HTML
-@background_color:          #277062;    // Background color
+@background_color:          #FFF;    // Background color
 @font_color:                black;      // Font color
 // Header
-@navbarItemBgColor:         #144E01;    // Main nav background color
+@navbarItemBgColor:         inherit;    // Main nav background color
+@homeColor:                 green;
 // Main
 @link_color:                blue;        // Link color
 @link_visited:              purple;      // Link Visited color
@@ -40,6 +41,13 @@ a:visited {
     width: 100%;
 }
 
+@media screen and (max-width: 575px) {
+    .footer-column,
+    .follow {
+        width: 100%;
+    }
+}
+
 /** --------------------------------------------------------------
  *  Logo images
  */
@@ -54,4 +62,8 @@ a:visited {
     img {
         vertical-align: bottom;
     }
+}
+
+.site-logo-text a {
+    color: @homeColor;
 }

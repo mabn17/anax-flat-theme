@@ -1,14 +1,202 @@
 /**
 * Anax Flat theme.
+* Max - Height:   379 px
+* Max - Wifth:    320 px
 */
 @import url(base.less);
 // HTML
-@background_color:          #FFF;          // Background color
+@background_color:          #fff;          // Background color
 @font_color:                #000;          // Font color
 // Header
-@navbarItemBgColor:         #D3D3D3;       // Main nav background color
-// Main
-@link_color:                blue;          // Link color         (NOT ACTIVE)
-@link_visited:              purple;        // Link Visited color (NOT ACTIVE)
+@navbarItemBgColor:         rgba(0, 0, 0, 0.1);       // Main nav background color
+@homeColor:                 #FF8336;
 // Footer
-@footer_color:              #DCDCDC;       // Background color
+@footer_color:              rgba(0, 0, 0, 0.4);       // Background color
+@footerHeight:              270px;
+@gridWidth:                 97.4%;
+@navbarMenuButtonClickedColor:  #B7B7B7;
+
+html {
+    height: 100%;
+    overflow: auto;
+    background-color: @footer_color;
+
+    & h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: Helvetica;
+    }
+
+    & p {
+        font-family: "Times New Roman", Times, serif;
+    }
+}
+
+// ONLY INDEX PAGE
+.route- {
+    height: 100%;
+    overflow: auto;
+    // position: relative;
+    // padding-bottom: @footerHeight;
+    background-image: url(../img/francisco-moreno-53323.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #FFF;
+
+    & .main {
+        min-height: 100%;
+    }
+
+    & .flash-wrap img {
+        display: none;
+    }
+
+    & .site-logo-text {
+        position: relative;
+        left: 55px;
+    }
+
+    & .site-logo-text a {
+        font-weight: bold;
+    }
+
+    & .rm-max .rm-mobile {
+        background: inherit;
+        box-shadow: 0 4px 2px -2px #000;
+        & a {
+            background: #2C2C2C;
+        }
+    }
+
+    & a.rm-button .rm-button-face-2 {
+        z-index: 2;
+    }
+
+    & .singles,
+    .album {
+        height: auto;
+        width: auto;
+        margin: 12px;
+        background-color: @footer_color;
+        box-shadow: 0 4px 2px -2px #000;
+        text-align: center;
+        position: relative;
+        left: 30px;
+
+        & p {
+            margin: 5px;
+        }
+    }
+
+    & .singles {
+        position: relative;
+        left: 1.6%;
+    }
+
+    & .navbar2 {
+        position: relative;
+        left: 18px;
+        margin-top: 8px;
+        width: @gridWidth;
+        font-weight: bold;
+        color: #fff;
+        float: right;
+        font-weight: bold;
+    }
+
+    & .rm-desktop li {
+        text-align: center;
+        width: @gridWidth / 3;
+        box-shadow: 0 4px 2px -2px #000;
+    }
+
+    & .outer-wrap-footer {
+        clear: both;
+        box-shadow: 0 4px 2px -2px #000;
+        color: #FFF;
+        // height: @footerHeight;
+        // position: absolute;
+        // right: 0;
+        // left: 0;
+        // bottom: 0;
+
+        & a {
+            color: #fff;
+        }
+    }
+
+    // THIS TOOK A WHILE TO FIGURE OUT
+    @media screen and (min-width: 811px) {
+        .route- {
+            position: relative;
+        }
+        .outer-wrap-footer {
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0;
+        }
+    }
+
+    @media screen and (max-height: 573px) {
+        .rm-desktop {
+            display: none;
+        }
+
+        .album,
+        .singles {
+            position: absolute;
+            top: 5% !important;
+        }
+
+        .album {
+            left: 40% !important;
+        }
+
+        .singles {
+            left: 65% !important;
+        }
+    }
+
+    @media screen and (max-height: 430px) {
+        .album,
+        .singles {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 810px) and (max-height: 573px) {
+        .album,
+        .singles {
+            display: none;
+        }
+    }
+}
+
+// RULES FOR EVEY PAGE
+.flash-wrap img {
+    width: 100%;
+    height: 260px;
+}
+
+@media screen and (max-width: 626px) {
+    .rm-desktop {
+        display: none;
+    }
+
+    .site-logo-text img {
+        display: none;
+    }
+}
+
+// @media screen and (max-width: 575px) {
+//     .footer-column,
+//     .follow {
+//         width: 100%;
+//     }
+// }
